@@ -3,3 +3,7 @@
     height:100%;
     background-color:lightgoldenrodyellow;
 }
+
+.Hidden{
+    visibility: collapse;
+}

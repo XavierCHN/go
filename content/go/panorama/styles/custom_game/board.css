@@ -25,12 +25,24 @@
     height: 50px;
 }
 
-.Stone:hover {
+.NotPlaying .Stone:hover {
+    background-image:url("file://{resources}/images/invalid.psd");
+}
+
+.BlackPlayerPlaying.Playing .NoStone.Stone:hover {
     background-image:url("file://{resources}/images/black.psd");
     background-size:100% 100%;
     brightness: 0.85;
 
     opacity: 0.9;
+}
+
+.WhitePlayerPlaying.Playing .NoStone.Stone:hover {
+    background-image:url("file://{resources}/images/white.psd");
+    background-size:100% 100%;
+    brightness: 0.85;
+
+    opacity: 0.8;
 }
 
 .Stone.Black {
@@ -43,4 +55,7 @@
     background-image:url("file://{resources}/images/white.psd");
     background-size:100% 100%;
     brightness: 0.85;
+}
+.Stone.NoStone {
+    background-image:url("file://{resources}/images/empty.psd");
 }

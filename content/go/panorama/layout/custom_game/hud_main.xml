@@ -1,18 +1,83 @@
 <root>
     <styles>
         <include src="file://{resources}/styles/custom_game/board.css" />
+        <include src="file://{resources}/styles/custom_game/mode_selection.css" />
         <include src="file://{resources}/styles/custom_game/hud_main.css" />
+        <include src="file://{resources}/styles/custom_game/players.css" />
+        <include src="s2r://panorama/styles/dotastyles.css" />
     </styles>
     <scripts>
+        <include src="file://{resources}/scripts/custom_game/utils.js" />
         <include src="file://{resources}/scripts/custom_game/board.js" />
+        <include src="file://{resources}/scripts/custom_game/gamerules.js" />
     </scripts>
-    <script>
-        $.Msg("board");
-    </script>
     <Panel class="HudMainRoot">
         <Panel class="Board" id="board">
             <Panel class="Grid" />
             <Panel id="stone_layer" />
         </Panel>
+
+        <Panel class="PlayersPanel" hittest="false">
+            <Panel class="PlayerPanel LocalPlayer">
+                <DOTAAvatarImage steamid="local" class="PlayerAvatar"/>
+                <Label text="30:00" id="base_time_local" />
+                <Label text="00:30      3" id="bonus_time_local"/>
+            </Panel>
+            <Panel class="PlayerPanel">
+                <DOTAAvatarImage steamid="local" class="PlayerAvatar"/>
+                <Label text="30:00" id="base_time_enemy" />
+                <Label text="00:30      3" id="bonus_time_enemy" />
+            </Panel>
+        </Panel>
+
+        <!--<Panel class="ModeSelection Hidden" id="mode_selection">-->
+            <!--&lt;!&ndash;基本时间&ndash;&gt;-->
+            <!--<Panel class="ModeSelectionItem">-->
+                <!--<Label text="BaseTimeSelection" class="ModeSelectionText"/>-->
+                <!--<DropDown id="base_time_selection">-->
+                    <!--<Label text="BaseTime_None" id="base_time_none" />-->
+                    <!--<Label text="BaseTime_5_mins" id="base_time_5_mins" />-->
+                    <!--<Label text="BaseTime_10_mins" id="base_time_10_mins" />-->
+                    <!--<Label text="BaseTime_30_mins" id="base_time_30_mins" />-->
+                    <!--<Label text="BaseTime_60_mins" id="base_time_60_mins" />-->
+                <!--</DropDown>-->
+            <!--</Panel>-->
+            <!--&lt;!&ndash;读秒时间&ndash;&gt;-->
+            <!--<Panel class="ModeSelectionItem">-->
+                <!--<Label text="BonusTimeSelection" class="ModeSelectionText"/>-->
+                <!--<DropDown id="bonus_time_selection">-->
+                    <!--<Label text="BonusTime_30_secs" id="bonus_time_30_secs" />-->
+                    <!--<Label text="BonusTime_60_secs" id="bonus_time_60_secs" />-->
+                <!--</DropDown>-->
+            <!--</Panel>-->
+            <!--&lt;!&ndash;读秒次数&ndash;&gt;-->
+            <!--<Panel class="ModeSelectionItem">-->
+                <!--<Label text="BonusCountSelection" class="ModeSelectionText"/>-->
+                <!--<DropDown id="bonus_count_selection">-->
+                    <!--<Label text="BonusCount_1" id="bonus_count_1" />-->
+                    <!--<Label text="BonusCount_3" id="bonus_count_3" />-->
+                    <!--<Label text="BonusCount_5" id="bonus_count_5" />-->
+                <!--</DropDown>-->
+            <!--</Panel>-->
+            <!--&lt;!&ndash;贴目&ndash;&gt;-->
+            <!--<Panel class="ModeSelectionItem">-->
+                <!--<Label text="KomiSelection" class="ModeSelectionText"/>-->
+                <!--<DropDown id="komi_selection">-->
+                    <!--<Label text="Komi_05" id="komi_05" />-->
+                    <!--<Label text="Komi_15" id="komi_15" />-->
+                    <!--<Label text="Komi_25" id="komi_25" />-->
+                    <!--<Label text="Komi_35" id="komi_35" />-->
+                    <!--<Label text="Komi_45" id="komi_45" />-->
+                    <!--<Label text="Komi_55" id="komi_55" />-->
+                    <!--<Label text="Komi_65" id="komi_65" />-->
+                    <!--<Label text="Komi_75" id="komi_75" />-->
+                    <!--<Label text="Komi_85" id="komi_85" />-->
+                    <!--<Label text="Komi_95" id="komi_95" />-->
+                <!--</DropDown>-->
+            <!--</Panel>-->
+            <!--<Button class="ButtonBevel" id="confirm_button" onactivate="OnConfirmGameRule()">-->
+                <!--<Label text="#Confirm" />-->
+            <!--</Button>-->
+        <!--</Panel>-->
     </Panel>
 </root>

@@ -2,6 +2,9 @@
 {
 	custom_net_tables =
 	[
-		"game_data",
+		"board_data",
+		"game_state",
+		"player_state",
+		"clock_state"
 	]
 }

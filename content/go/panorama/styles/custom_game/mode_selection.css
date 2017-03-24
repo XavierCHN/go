@@ -1,0 +1,35 @@
+.ModeSelection{
+    width: 410px;
+
+    border: 2px solid antiquewhite;
+
+    vertical-align: center;
+    horizontal-align:center;
+
+    background-color: navajowhite;
+    box-shadow: 3px 3px 3px 3px black;
+
+    flow-children: down;
+
+    padding: 25px;
+}
+
+DropDown {
+    margin-top:10px;
+    margin-bottom: 10px;
+    margin-left:10px;
+    width: 200px;
+}
+
+.ModeSelectionItem {
+    flow-children:right;
+}
+
+.ModeSelectionText{
+    vertical-align:center;
+    width: 150px;
+}
+
+#confirm_button {
+    horizontal-align:center;
+}
