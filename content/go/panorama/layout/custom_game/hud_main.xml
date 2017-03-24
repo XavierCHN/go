@@ -1,0 +1,18 @@
+<root>
+    <styles>
+        <include src="file://{resources}/styles/custom_game/board.css" />
+        <include src="file://{resources}/styles/custom_game/hud_main.css" />
+    </styles>
+    <scripts>
+        <include src="file://{resources}/scripts/custom_game/board.js" />
+    </scripts>
+    <script>
+        $.Msg("board");
+    </script>
+    <Panel class="HudMainRoot">
+        <Panel class="Board" id="board">
+            <Panel class="Grid" />
+            <Panel id="stone_layer" />
+        </Panel>
+    </Panel>
+</root>

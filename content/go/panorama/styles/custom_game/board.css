@@ -1,0 +1,46 @@
+.Board{
+    width: 1000px;
+    height:1000px;
+    background-image:url("file://{resources}/images/background.psd");
+    background-size:100% 100%;
+    vertical-align:center;
+    horizontal-align:center;
+}
+.Grid {
+    width: 902px;
+    height: 902px;
+    background-image:url("file://{resources}/images/grid.psd");
+    background-size:100% 100%;
+    vertical-align:center;
+    horizontal-align:center;
+}
+
+#stone_layer {
+    width: 100%;
+    height: 100%;
+}
+
+.Stone {
+    width: 50px;
+    height: 50px;
+}
+
+.Stone:hover {
+    background-image:url("file://{resources}/images/black.psd");
+    background-size:100% 100%;
+    brightness: 0.85;
+
+    opacity: 0.9;
+}
+
+.Stone.Black {
+    background-image:url("file://{resources}/images/black.psd");
+    background-size:100% 100%;
+    brightness: 0.85;
+}
+
+.Stone.White {
+    background-image:url("file://{resources}/images/white.psd");
+    background-size:100% 100%;
+    brightness: 0.85;
+}
